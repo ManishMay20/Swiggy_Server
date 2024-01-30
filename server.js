@@ -175,10 +175,10 @@ app.get("/api/restaurants/search/suggest", async (req, res) => {
 
 // For Search restaurant and dish https://www.swiggy.com/dapi/restaurants/search/v3?lat=22.7195687&lng=75.8577258&str=${query}&trackingId=null&submitAction=SUGGESTION
 app.get("/api/restaurants/search", async (req, res) => {
-  const { lat, lng, str, submitAction } = req.query;
+  const { lat, lng, str, submitAction, selectedPLTab } = req.query;
   console.log(req.query);
 
-  const url = `https://www.swiggy.com/dapi/restaurants/search/v3?lat=${lat}&lng=${lng}&str=${str}&trackingId=null&submitAction=${submitAction}`;
+  const url = `https://www.swiggy.com/dapi/restaurants/search/v3?lat=${lat}&lng=${lng}&str=${str}&trackingId=null&submitAction=${submitAction}&selectedPLTab=${selectedPLTab}`;
   await fetch(url, {
     headers: {
       "Content-Type": "application/json",
