@@ -144,7 +144,7 @@ app.get("/api/landing", async (req, res) => {
 });
 
 // For search suggestions https://www.swiggy.com/dapi/restaurants/search/suggest?lat=22.7195687&lng=75.8577258&str=${searchText}&trackingId=undefined
-app.get("api/restaurants/search/suggest", async (req, res) => {
+app.get("/api/restaurants/search/suggest", async (req, res) => {
   const { lat, lng, str } = req.query;
   console.log(req.query);
 
@@ -174,7 +174,7 @@ app.get("api/restaurants/search/suggest", async (req, res) => {
 });
 
 // For Search restaurant and dish https://www.swiggy.com/dapi/restaurants/search/v3?lat=22.7195687&lng=75.8577258&str=${query}&trackingId=null&submitAction=SUGGESTION
-app.get("api/restaurants/search", async (req, res) => {
+app.get("/api/restaurants/search", async (req, res) => {
   const { lat, lng, str, submitAction } = req.query;
   console.log(req.query);
 
