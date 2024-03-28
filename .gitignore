@@ -1,5 +1,7 @@
 node_modules/
 
+functions
+
 dist/
 
 .DS_Store
@@ -7,3 +9,5 @@ dist/
 .env
 
 .cache
+# Local Netlify folder
+.netlify
